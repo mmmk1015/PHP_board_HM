@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>入力フォーム</title>
+</head>
+
+<body>
+    入力フォーム<br>
+    <form method="post" action="add.php">
+        タイトル：<input type="text" name="title_name" required><br>
+        できごとカテゴリー：
+        <select name="category">
+            <option hidden>えらんでね</option>
+            <option value="1">がっこう</option>
+            <option value="2">ならいごと</option>
+            <option value="3">おうち</option>
+        </select>
+        <br>
+        今日の気分：
+        <input type="radio" name="difficulty" value="1">😊
+        <input type="radio" name="difficulty" value="2" checked>🙂
+        <input type="radio" name="difficulty" value="3">😣
+        <br>
+        元気ボルテージ：<input type="number" min="1" max="300" name="voltage">％
+        <br>
+        できごと：
+        <textarea name="howto" cols="40" rows="4" maxlength="320"></textarea>
+        <br>
+        <input type="submit" value="送信">
+    </form>
+</body>
